@@ -1,0 +1,182 @@
+<%- include('../partials/header') %> 
+<%- include('../partials/menu') %>
+
+
+
+
+
+<%  if(items) { %>
+
+
+
+        
+
+        <br>
+        <div class="container" id="containerResults">
+                <div class="row" id="Row1">
+                        <div class="col">
+                                <img src = <%=items.data.meals[0].strMealThumb%> height=75% width=50% ></img>
+                        </div> 
+                        <div class="col">
+                                <h1><b><%=items.data.meals[0].strMeal%></b></h1>
+
+                                <h3><b>Instructions: </b></h3>
+
+                                <p><%=items.data.meals[0].strInstructions%></p>
+                        </div>
+                        
+
+                        
+                       
+
+                </div>       
+                <div class="row" id="Row2">
+                        
+                        <div class="col">
+                                
+                        </div>
+
+                        <div class="col">
+                                <h3><b>Tags: </b></h3>
+                                <p><%=items.data.meals[0].strTags%></p>
+                               
+                        </div>
+                       
+                        
+
+                </div>
+
+                <div class="row" id="Row3">
+                        
+                        <div class="col">
+                                
+                        </div>
+
+                        <div class="col">
+
+                                
+                                
+                                
+                                <a href="<%=items.data.meals[0].strSource%>" class="btn btn-primary">View Source Website</a>
+                                <a href="<%=items.data.meals[0].strYoutube%>" class="btn btn-primary">Watch On Youtube</a>
+                                
+                                
+                        </div>
+                       
+                        
+
+                </div>
+                <br>
+                <div class="row" id="Row4">
+                        
+                        <div class="col">
+                                
+                        </div>
+
+                        <div class="col">
+                                
+                                
+                                                                
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Review</button>
+
+
+                                <div id="myModal" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                <div class="modal-header text-center">
+                                        
+                                        <h4 class="modal-title w-100 text-center">Add Review</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                        </button>
+
+                                        
+                                </div>
+
+                                <form action="/reviews" method="post" class="d-flex" id="submitReview">
+
+
+                                        <div class="modal-body">
+                                        
+                                                <div class="form-group" id="mealNameDiv">
+                                                        <label for="Meal Name"><b>Meal Name</b></label>
+                                                        
+                                                        <input class="center-block" type="text" name="mealNameInput" value='<%=items.data.meals[0].strMeal%>' readonly disabled>
+                                                        <textarea class="form-control" name="mealName" rows="1" hidden><%=items.data.meals[0].strMeal%></textarea>
+                                                        <textarea class="form-control" name="mealID" rows="1" hidden><%=items.data.meals[0].idMeal%></textarea>
+                                                        
+
+                                                        
+
+                                                        
+                                                        
+                                                </div>
+                                                <div class="form-group">
+        
+                                                        
+                                                        <label for="Enter review"><b>Enter Review</b></label>
+                                                        <textarea class="form-control" name="reviewInput" rows="3"></textarea>
+                                                        
+                                                        
+                                                </div>
+                                                        
+                                                
+                                                
+                                        </div>
+                                        <div class="modal-footer">
+        
+                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                <button class="btn btn-success" type="submit">Submit</button>
+                                                
+                                                
+                                                
+                                        </div>
+
+
+
+
+                                </form>
+
+
+
+
+
+
+                                
+                                </div>
+
+                                </div>
+                                </div>
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                        </div>
+                       
+                        
+
+                </div>
+                <br>
+
+                
+
+                
+
+
+        </div> 
+
+        
+
+
+
+
+
+<% } %>
+
+
+<%- include('../partials/footer'); -%>

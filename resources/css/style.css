@@ -1,0 +1,76 @@
+.navbar-custom {
+    height: 150px;
+    
+    
+    
+}
+
+
+#homebutton {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    
+  
+}
+#reviewbutton {
+  position: absolute;
+  top: 0%;
+  left: 4%;
+  
+  
+
+}
+
+#searchbar {
+  position: absolute;
+  top: 65%;
+  left: 27.5%;
+  width: 50%;
+  
+  
+}
+#containerResults {
+
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  
+  
+}
+#myModal{
+  position: fixed;
+  text-align: center;
+}
+
+input, label {
+  display:block;
+}
+
+#mealNameDiv {
+  text-align: center;
+}
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+
+#reviewsSearchbar {
+  position: absolute;
+  left: 1%;
+  
+  width: 40%;
+  
+}
+
+#reviewContainer {
+  text-align: center;
+}
+#errorContainer {
+  text-align: center;
+}
+
+

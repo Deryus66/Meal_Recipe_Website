@@ -1,0 +1,35 @@
+{
+  "name": "individualproject",
+  "version": "1.0.0",
+  "description": "website for individual projejct",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CU-CSCI-3308-Fall-2021/individualprojects_sete-Deryus66.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CU-CSCI-3308-Fall-2021/individualprojects_sete-Deryus66/issues"
+  },
+  "homepage": "https://github.com/CU-CSCI-3308-Fall-2021/individualprojects_sete-Deryus66#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "body-parser": "^1.19.0",
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mocha": "^9.1.3",
+    "nyc": "^15.1.0",
+    "pg-promise": "^10.11.1",
+    "query-string": "^7.0.1"
+  }
+}
